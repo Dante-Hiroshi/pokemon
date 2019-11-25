@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Dados Api
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar placeholder="pesquisar (nome)..." (ionInput)="filtraDados($event)"></ion-searchbar>
+
+  <ion-list>
+    <ion-item *ngFor="let item of lista">
+      name: {{item.name}}<br />
+      type: {{item.type}}<br />
+      trainner: {{item.trainner}}<br />
+      value: {{item.value}}<br /><br />
+      <ion-card></ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
